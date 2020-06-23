@@ -21,7 +21,7 @@
 
 steamPage:
     # This is the short text appearing on the steam page
-    shortText: shapez.io to gra polegająca na budowaniu fabryki automatyzującej tworzenie i łączenie ze sobą coraz bardziej skomplikowanych kształtów na mapie, która nie ma końca.
+    shortText: shapez.io to gra polegająca na budowaniu fabryki mającej za zadanie tworzenie i łączenie ze sobą coraz bardziej skomplikowanych kształtów na nieskończonej mapie.
 
     # This is the long description for the steam page - It is contained here so you can help to translate it, and I will regulary update the store page.
     # NOTICE:
@@ -78,7 +78,7 @@ global:
     # Translator note: We don't use SI size units for common speak, but if you want to keep it SI
     # ...also, Polish has wierd nature of diffrent number naming, we have "million" and "milliard"-thing wich actually is billion in English
     suffix:
-        thousands: tys
+        thousands: tys.
         millions: mln
         billions: mld
         trillions: bln
@@ -124,14 +124,14 @@ mainMenu:
     continue: Kontynuuj
     newGame: Nowa gra
     changelog: Dziennik Zmian
-    importSavegame: Importuj
+    importSavegame: Importuj zapis
     openSourceHint: Gra z otwartym kodem źródłowym!
     discordLink: Oficjalny serwer Discord!
     helpTranslate: Pomóż w tłumaczeniu!
 
     # This is shown when using firefox and other browsers which are not supported.
     browserWarning: >-
-        Przepraszam, ale ta gra może działać wolno w Twojej przeglądarce! Kup pełną wersję gry lub pobierz przeglądarkę chrome.
+        Przepraszam, ale ta gra może działać wolno w Twojej przeglądarce! Kup pełną wersję gry lub pobierz przeglądarkę Google Chrome.
 
     savegameLevel: Poziom <x>
     savegameLevelUnknown: Nieznany poziom
@@ -174,7 +174,7 @@ dialogs:
         deleteGame: Wiem, co robię
         viewUpdate: Zobacz aktualizację
         showUpgrades: Pokaż ulepszenia
-        showKeybindings: Pokaż Klawiszologię
+        showKeybindings: Pokaż Klawisze Skrótów
 
     importSavegameError:
         title: Błąd importowania
@@ -207,16 +207,16 @@ dialogs:
             Gra wymaga ponownego uruchomienia w celu zastosowania nowych ustawień.
 
     editKeybinding:
-        title: Zmień klawiszologię
+        title: Zmień klawisz skrótu
         desc: Naciśnij klawisz bądź przycisk myszy, który chcesz przypisać lub wciśnij Escape, aby anulować.
 
     resetKeybindingsConfirmation:
-        title: Zresetuj klawiszologię
-        desc: Ta akcja zresetuje wszystkie ustawienia klawiszologii do domyślnych wartości. Proszę potwierdzić.
+        title: Zresetuj klawisze skrótów
+        desc: Ta akcja zresetuje wszystkie przypisane klawisze do domyślnych wartości. Proszę potwierdzić.
 
     keybindingsResetOk:
-        title: Reset Klawiszologii
-        desc: Klawiszologia została przywrócona do ustawień domyślnych!
+        title: Reset Klawiszy Skrótów
+        desc: Klawisze zostały przywrócone do ustawień domyślnych!
 
     featureRestriction:
         title: Wersja Demo
@@ -248,7 +248,7 @@ dialogs:
             Schematy nie zostały jeszcze odblokowane! Awansuj poziomami, by odblokować.
 
     keybindingsIntroduction:
-        title: Przydatna Klawiszologia
+        title: Przydatne Skróty
         desc: >-
             Gra posiada sporą gamę kombinacji klawiszy upraszczających budowę dużych fabryk.
             Oto kilka z nich, lecz nie zmienia to faktu iż <strong>warto sprawdzić dostępne kombinacje</strong>!<br><br>
@@ -307,7 +307,7 @@ ingame:
         purple: Fioletowy
         cyan: Cyjanowy
         white: Biały
-        uncolored: Brak koloru
+        uncolored: Szary
 
     # Everything related to placing buildings (I.e. as soon as you selected a building
     # from the toolbar)
@@ -324,11 +324,11 @@ ingame:
             speed: Szybkość
             range: Zasięg
             storage: Pojemność
-            oneItemPerSecond: 1 obiekt / s
-            itemsPerSecond: <x> obiektów / s
+            oneItemPerSecond: 1 przedmiot / s
+            itemsPerSecond: <x> przedmiotów / s
             itemsPerSecondDouble: (x2)
 
-            tiles: <x> kafelków
+            tiles: <x> pól
 
     # The notification when completing a level
     levelCompleteNotification:
@@ -369,8 +369,9 @@ ingame:
                 title: Produkowane
                 description: Wyświetla wszystkie kształty produkowane przez Twoją fabrykę, w tym półprodukty.
             delivered:
-                title: Dostarczone
-                description: Wyświetla kształty dostarczone do budynku głównego.
+                title: Dostarczane
+                description: Wyświetla kształty dostarczane do budynku głównego.
+                #Translator note: changed from 'delivered' to 'being delivered'
         noShapesProduced: Brak wyprodukowanych kształtów.
 
         # Displays the shapes per minute, e.g. '523 / m'
@@ -423,7 +424,7 @@ ingame:
 # All shop upgrades
 shopUpgrades:
     belt:
-        name: Taśmociągi, Dystrybutory & Tunele
+        name: Taśmociągi, Rozdzielacze & Tunele
         description: Szybkość x<currentMult> → x<newMult>
     miner:
         name: Wydobycie
@@ -450,11 +451,11 @@ buildings:
     miner: # Internal name for the Extractor
         default:
             name: &miner Ekstraktor
-            description: Postaw na źródle kształtów, by je wydobyć.
+            description: Postaw na źródle kształtów/barwników, by je wydobyć.
 
         chainable:
             name: Ekstraktor (Łańcuchowy)
-            description: Postaw na źródle kształtów, by je wydobyć. Mogą być połączone szeregowo.
+            description: Postaw na źródle kształtów/barwników, by je wydobyć. Mogą być połączone szeregowo.
 
     underground_belt: # Internal name for the Tunnel
         default:
@@ -751,13 +752,13 @@ settings:
 
         enableColorBlindHelper:
             title: Color Blind Mode
-            description: Enables various tools which allow to play the game if you are color blind.
+            description: Włącza różnorakie narzędzia umożliwiające rozgrywkę dla osób ze ślepotą kolorów.
 
 keybindings:
-    title: Klawiszologia
+    title: Klawisze Skrótów
     hint: >-
         Wskazówka: Upewnij się, że wykorzystujesz CTRL, SHIFT i ALT! Pozwalają na różne metody kładzenia elementów.
-    resetKeybindings: Zresetuj Klawiszologię
+    resetKeybindings: Zresetuj Przypisane Klawisze
 
     categoryLabels:
         general: Aplikacja
@@ -766,7 +767,7 @@ keybindings:
         placement: Ustawianie
         massSelect: Zbiorowe Zaznaczenie
         buildings: Skróty Budynków
-        placementModifiers: Modyfikatory Stawiania
+        placementModifiers: Modyfikatory Ustawiania
 
     mappings:
         confirm: Potwierdź
@@ -827,8 +828,8 @@ about:
         Jeżeli chcesz pomóc w rozwoju gry, sprawdź <a href="<githublink>" target="_blank">repozytorium shapez.io na Githubie</a>.<br><br>
         Ta gra nie byłaby możliwa bez wspaniałej społeczności Discord skupionej na moich grach - Naprawdę powinieneś dołączyć do <a href="<discordlink>" target="_blank">mojego serwera Discord</a>!<br><br>
         Ścieżka dźwiękowa tej gry została stworzona przez <a href="https://soundcloud.com/pettersumelius" target="_blank">Peppsena</a> - Jest niesamowity.<br><br>
-        Na koniec, wielkie dzięki mojemu najlepszemu przyjacielowi: <a href="https://github.com/niklas-dahl" target="_blank">Niklas</a> - Bez naszego wspólnego grania w Factorio ta gra nigdy by nie powstała.
-
+        Na koniec, wielkie dzięki mojemu najlepszemu przyjacielowi: <a href="https://github.com/niklas-dahl" target="_blank">Niklas</a> - Bez naszego wspólnego grania w <a href="factorio.com" target="_blank">Factorio</a> ta gra nigdy by nie powstała.
+        #Translator note: Added link to Factorio webpage (becouse it's nice to know what is this game based on)
 changelog:
     title: Dziennik zmian
 
